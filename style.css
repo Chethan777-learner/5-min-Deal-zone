@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  background: #f5f9ff;
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header Bar */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  color: #b78b10;
+  padding: 15px 20px;
+  font-weight: 700;
+  font-size: 1.2em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Menu & Search Buttons */
+.menu-btn,
+.search-btn {
+  background: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #555;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.menu-btn:hover,
+.search-btn:hover {
+  background: #f2f2f2;
+}
+
+/* Search Bar (Dropdown) */
+.search-bar {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  max-width: 400px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+.search-bar.active {
+  display: block;
+}
+.search-bar input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1em;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 1100;
+  padding: 25px 15px;
+}
+.sidebar.active {
+  left: 0;
+}
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  font-size: 1.1em;
+  padding: 10px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.sidebar ul li:hover {
+  transform: translateX(5px);
+}
+
+/* Category Colors */
+.sidebar .crazy { color: #ff4d4d; }
+.sidebar .fashion { color: #ffb300; }
+.sidebar .mobile { color: #2196f3; }
+.sidebar .electronics { color: #9c27b0; }
+.sidebar .home { color: #4caf50; }
+.sidebar .toys { color: #e91e63; }
+
+/* Main Section */
+main {
+  padding: 120px 20px 80px;
+  text-align: center;
+  background: linear-gradient(to bottom, #7eb8ff, #f5f9ff);
+}
+main h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: #fff;
+}
+main p {
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Floating Action Button */
+.fab {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #1e90ff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  color: white;
+  font-size: 1.4em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.fab:hover {
+  background: #1478e4;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.1em;
+    padding: 12px 15px;
+  }
+  .search-bar {
+    width: 90%;
+  }
+}
